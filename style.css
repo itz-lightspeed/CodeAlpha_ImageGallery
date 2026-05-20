@@ -1,0 +1,176 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  font-family: 'Poppins', sans-serif; 
+}
+
+body{
+    background: #0d0d0d;
+    color: white;
+    min-height: 100vh;
+}
+
+.gallery-section{
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.heading h1{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.heading p{
+    color:#bdbdbd;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;;
+}
+
+.filters{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.filters button{
+    padding: 12px 25px;
+    border: none;
+    background: #1a1a1a;
+    color: white;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: 0.4s ease;
+    font-size: 15px;
+    border: 1px solid #2c2c2c;
+}
+
+.filters button:hover,
+.filters button.active{
+    background: white;
+    color: black;
+    transform: translate(-2px);
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card{
+    overflow: hidden;
+    border-radius: 18px;
+    cursor: pointer;
+    position: relative;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.6s ease;
+}
+
+.card:hover img{
+    transform: scale(1.08);
+    filter: brightness(0.75);
+}
+
+/* LIGHTBOX */
+.lightbox{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:rgba(0,0,0,0.95);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;;
+}
+
+/* LIGHTBOX IMAGE */
+.lightbox-img{
+  width:75%;
+  max-width:850px;
+  border-radius:15px;
+  animation:zoom 0.4s ease;
+}
+
+/* ANIMATION */
+@keyframes zoom{
+  from{
+    transform:scale(0.8);
+    opacity:0;
+  }
+
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
+}
+
+/* BUTTONS */
+.close-btn,
+.prev-btn,
+.next-btn{
+  position: absolute;
+  color:white;
+  font-size:2rem;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+.close-btn:hover,
+.prev-btn:hover,
+.next-btn:hover{
+  color:#cfcfcf;
+}
+
+/* CLOSE */
+.close-btn{
+  top:30px;
+  right:40px;
+}
+
+/* PREV/NEXT */
+.prev-btn{
+  left:40px;
+}
+
+.next-btn{
+  right:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .heading h1{
+    font-size:2.2rem;
+  }
+
+  .lightbox-img{
+    width:92%;
+  }
+
+  .prev-btn,
+  .next-btn{
+    font-size:1.5rem;
+  }
+
+}

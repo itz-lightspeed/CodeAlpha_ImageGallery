@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="gallery-section">
+        <div class="heading">
+            <h1>Image Gallery</h1>
+            <p>Responsive image gallery with filters, hover effects, smooth transitions and lightbox navigations</p>
+        </div>
+
+        <div class="filters">
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="nature">Nature</button>
+            <button data-filter="city">City</button>
+            <button data-filter="art">Art</button>
+        </div>
+
+        <div class="gallery">
+            <div class="card nature">
+                <img src="image/nature1.jpg" alt="">
+            </div>
+            <div class="card city">
+                <img src="image/city1.jpg" alt="">
+            </div>
+            <div class="card art">
+                <img src="image/art1.jpg" alt="">
+            </div>
+            <div class="card nature">
+                <img src="image/nature2.jpg" alt="">
+            </div>
+            <div class="card city   ">
+                <img src="image/city2.jpg" alt="">
+            </div>
+            <div class="card art">
+                <img src="image/art2.jpg" alt="">
+            </div>
+            <div class="card nature">
+                <img src="image/nature3.jpg" alt="">
+            </div>
+            <div class="card city   ">
+                <img src="image/city3.jpg" alt="">
+            </div>
+            <div class="card art">
+                <img src="image/art3.jpg" alt="">
+            </div>
+             <div class="card nature">
+                <img src="image/nature4.jpg" alt="">
+            </div>
+             <div class="card city">
+                <img src="image/city4.jpg" alt="">
+            </div>
+             <div class="card art">
+                <img src="image/art4.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox">
+        <span class="close-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </span>
+        <span class="prev-btn">
+            <i class="fa-solid fa-angle-left"></i>
+        </span>
+
+        <img src="" class="lightbox-img"/>
+
+        <span class="next-btn">
+            <i class="fa-solid fa-angle-right"></i>
+        </span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
